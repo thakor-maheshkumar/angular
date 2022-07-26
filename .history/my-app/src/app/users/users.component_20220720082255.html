@@ -1,0 +1,21 @@
+<!-- <h2>{{users.id}}</h2>
+<h2>{{users.name}}</h2>
+<h2>{{users.email}}</h2>
+<p>users works!</p>
+
+<div>
+    <label for="name">User name:</label>
+    <input id="name" [(ngModel)]="users.name" placeholder="">
+</div> -->
+<h2>My Users</h2>
+<ul class="users">
+    <li *ngFor="let user of users">
+        <button type="button"  >
+            <span class="badge">{{user.id}}</span><br>
+            <span class="name">{{user.name}}</span><br>
+            <span class="name">{{user.email}}</span>
+        </button> 
+        
+        <a routerLink="/user/detail/{{user.id}}">Show</a>
+    </li>
+</ul>
